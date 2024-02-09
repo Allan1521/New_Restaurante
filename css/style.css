@@ -1,0 +1,70 @@
+/* ======================== GLobal===================== */
+* {
+    --vine: #a30404;
+    --yellow: #fed40e;
+    --gray: #e5e5e5;
+    padding: 0;
+    /* padding- espaço interno, da caixa*/
+    margin: 0;
+    /* margin- espaço externo */
+    box-sizing: border-box;
+    /*Border-box- impede de fazer o padding de crescer */
+    font-size: 93.75%;
+    /*100% - 16px | 93.75% - 15px. 
+    Diferença entre Px e %
+    Px unidade de medida absoluta
+    % unidade de medida realiva. Use sempre a unidade de medida relativa*/
+    /* dicas: Bordas e (padding-que é o espaçamento interno do elemento) altera um elemento */
+}
+html {
+    overflow: hidden;
+    /* esconde a barra de rolagem */
+    scroll-behavior: smooth;
+    /* faz rolar/deslizar a pagina de forma suave */
+}
+/* toda vez que e uma propriedade começar com "." é p/chamar uma class dentro de uma tag. 
+Consideramos como uma Class de reset de página, para esconder a barra de rolagem na horizontal, caso o comando venha a se repetir.*/
+
+.overflow-hidden {
+    overflow: hidden;/* cria a tag p/resetar a página */
+}
+body {
+    font-family:'Montserrat', sans-serif;
+    background: var(--vine) url(../assets/img/bg_icons_banner.png);/*Configura a imagem de fundo fazendo com ela se movimente junto com a página ou fique fixa.
+    Para imgens normais ou menores usamos jpg (formato mais leve e mais usado.Ex: Fotos) ou png permite recortar e colar de forma transparente. Temos tbém imagens vetorial que são as "SVG" que possibila vc deixar do tamanho que vc quiser.*/
+    background-attachment: fixed; /* é pra deixar a imagem de fundo fixa */
+    background-size: cover; /*encaixa a imagem sem repetir e centralizada. */
+}
+/* Unidade de medidas mais usadas::after
+ 1em é sempre relativa ao tamanho da fonte do emeento pai. se ele ñ encotrar e pegar do navegador que é padrão. Ex: 1em é 1x o tamanho da fonte do pai.
+ (em) = sempre será realativo ao tamanho da fonte definida no elemento pai. Ex: 1em ele irá colcoar uma vez o tamanho definido ele irá considerar que será 16px.
+ (rem) = sempre será relativo a fonte definida no elemento :root, caso ñ tenha a fonte definida no :root irá pegar o padrão do navegador que será 16px. */
+.contanier{
+    width: min(90vw, 800vw);
+    padding-top: 4rem;
+    margin: auto;
+}
+.img-fluid{
+    width: max(14vw, 100px);
+    object-fit: cover;
+}
+.flex-center-full{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.row{
+    flex-direction: row;
+}
+.text-center{
+    text-align: center;
+}
+/* ===================Titles===================== */
+.titulo-banner h1{
+    font-family: "Rum Raisin", sans-serif;
+    font-weight: normal;
+    font-size: 5rem;
+    color: var(--yellow);
+    
+}

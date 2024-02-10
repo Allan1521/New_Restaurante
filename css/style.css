@@ -39,7 +39,109 @@ body {
  1em é sempre relativa ao tamanho da fonte do emeento pai. se ele ñ encotrar e pegar do navegador que é padrão. Ex: 1em é 1x o tamanho da fonte do pai.
  (em) = sempre será realativo ao tamanho da fonte definida no elemento pai. Ex: 1em ele irá colcoar uma vez o tamanho definido ele irá considerar que será 16px.
  (rem) = sempre será relativo a fonte definida no elemento :root, caso ñ tenha a fonte definida no :root irá pegar o padrão do navegador que será 16px. */
-.contanier{
+
+ /* ================ Links & Buttons =============== */
+a{
+    text-decoration: none;
+}
+
+header ul li a {
+    padding: 10px;
+    color: var(--vine);
+    transition: all 0.3s;
+}
+
+header ul li a.item-menu:hover{
+    background: var(--vine);
+    color: var(--yellow);
+}
+/* =============== Header ======================= */
+
+header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header ul{
+    background: var(--yellow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2rem;
+    padding: 12px 30px;
+    height: 55px;
+    min-width: 800px;
+}
+header ul li {
+    list-style: none;
+    font-family: "Rum Raisin", sans-serif;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+
+button {
+    background: var(--yellow);
+    cursor: pointer;
+    padding: 10px 35px;
+    margin-top: 10px;
+    border: none;/*border:none é pra tirar o contorno/linha da bordar do elemneto. */
+    border-radius: 30px;/*border-radius: é p/arredondar as bordas do elemento ; */
+    box-shadow: 1px 1px 20px rgba(0,0,0,0.87);/*box-shadow: é p/deixar sombra no elemento.; */
+    color:var(--vine);
+    font-size: 1.8rem;/* font-size: é p/colocar o tamanho da fonte "letras"; */
+    text-transform: uppercase;/* text-transform: uppercase;é pra deixar o texto todo em letras Maíuscula. */
+    font-family: "Rum Raisin", sans-serif;
+    transition: all 0.3s ease;
+}
+button:hover {
+    background: #fff;
+    color: var(--vine);
+    padding: 10px 50px;
+}
+/* =================== Banner =================== */
+
+.slider {
+    display: flex;
+    transition: all ease .4;
+}
+.banner {
+    display: flex;/* display: flex faz como os elementos fique alinhados um ao lado do outro. */
+    align-items: center;/* align-items: center;faz o alinhamento/centralixado do texto */
+    justify-content: space-evenly;/* justify-content: space-evenly;coloca o espaço igual entre os filhos dentro da div. */
+    width: 100vw;
+    height: 75vh;
+}
+.img-titulo-banner img {
+    min-width: 400px;
+}
+.description-banner{
+    position: relative;
+    top: -30px;
+    max-width: 380px;
+}
+.left-banner p{
+    line-height: 44px;
+    letter-spacing: 0.8px;
+    color: #fff;
+    font-family: "Rum Raisin", sans-serif;
+}
+.description-banner p:first-child {
+    font-family: "Rum Raisin", sans-serif;
+    font-size: 1.9rem;
+}
+
+
+
+
+
+
+
+
+
+.container{
     width: min(90vw, 800vw);
     padding-top: 4rem;
     margin: auto;
@@ -60,11 +162,10 @@ body {
 .text-center{
     text-align: center;
 }
-/* ===================Titles===================== */
+/* ================== Titles ==================== */
 .titulo-banner h1{
     font-family: "Rum Raisin", sans-serif;
     font-weight: normal;
     font-size: 5rem;
     color: var(--yellow);
-    
 }
